@@ -1,0 +1,22 @@
+buildscript {
+
+    dependencies {
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.48'
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+plugins {
+
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.jetbrains.kotlin) apply false
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
